@@ -19,6 +19,37 @@ if (menuButton && primaryNavigation) {
 const heroVideo = document.querySelector(".hero-video");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+const foundationStatements = document.querySelectorAll(".foundation-statements article");
+
+if (foundationStatements.length && "IntersectionObserver" in window) {
+  let statementObserver;
+  const syncStatementMotion = () => {
+    statementObserver?.disconnect();
+    foundationStatements.forEach((statement) => {
+      statement.classList.remove("statement-reveal", "is-visible");
+    });
+    if (reducedMotion.matches) return;
+
+    // Observe the stationary article so text transforms cannot retrigger visibility.
+    statementObserver = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting, intersectionRatio }) => {
+        if (isIntersecting && intersectionRatio >= 0.2) {
+          target.classList.add("is-visible");
+        } else if (!isIntersecting) {
+          target.classList.remove("is-visible");
+        }
+      });
+    }, { threshold: [0, 0.2] });
+
+    foundationStatements.forEach((statement) => {
+      statement.classList.add("statement-reveal");
+      statementObserver.observe(statement);
+    });
+  };
+  reducedMotion.addEventListener("change", syncStatementMotion);
+  syncStatementMotion();
+}
+
 if (heroVideo) {
   const syncVideoMotion = () => {
     if (reducedMotion.matches) {

@@ -119,13 +119,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
 .hero-video { display: block; width: 100%; height: 520px; object-fit: cover; background: var(--charcoal-900); }
 
 .identity { padding-block: 0; background: var(--color-surface); }
-.foundation-statements .eyebrow { margin-bottom: 12px; color: var(--color-primary); font-size: var(--text-readable-label); line-height: 1.4; }
+.foundation-statements .eyebrow { margin-bottom: 12px; color: var(--color-primary); font-size: var(--text-readable-label); line-height: 1.4; text-align: center; }
 .foundation-statements p:last-child { color: var(--color-text-secondary); }
 .identity .container { width: min(calc(100% - (var(--container-padding) * 2)), var(--container-max)); }
 .foundation-statements { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-2xl); width: min(100%, 960px); margin: 0 auto; padding: var(--section-space) 0 var(--space-xl); }
 .foundation-statements article { padding-right: 0; }
 .foundation-statements article + article { padding-left: var(--space-lg); border-left: 1px solid var(--color-border); }
 .foundation-statements p:last-child { max-width: 46ch; margin: 0; }
+.foundation-statements .statement-reveal > p { opacity: 0; transform: translateY(32px); }
+.foundation-statements .statement-reveal.is-visible > p { opacity: 1; transform: translateY(0); transition: opacity 700ms ease-out, transform 700ms ease-out; }
 .foundation-visual { width: min(100%, var(--container-max)); margin: 0 auto; }
 .foundation-visual a { display: block; }
 .foundation-visual img { display: block; width: 100%; height: auto; }
@@ -630,6 +632,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .foundation-statements .statement-reveal > p,
+  .foundation-statements .statement-reveal.is-visible > p { opacity: 1; transform: none; transition: none; }
   .gallery-hero-panel { backdrop-filter: none; }
   .lightbox-image { animation: none; }
   .news-page-hero-panel { backdrop-filter: none; }
