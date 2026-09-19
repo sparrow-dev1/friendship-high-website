@@ -519,13 +519,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
   .hero-layout { overflow: hidden; }
   .hero-video { height: 440px; transform: scale(1.2); }
   .hero-copy { width: 100%; background: color-mix(in srgb, var(--charcoal-900) 10%, transparent); }
-  .hero-contact-ticker { top: 16px; display: block; height: 44px; background: var(--color-surface); box-shadow: none; backdrop-filter: none; color: var(--color-primary-hover); line-height: 44px; text-shadow: none; }
+  .hero-contact-ticker { position: relative; top: auto; left: auto; display: block; width: 100%; height: 44px; min-height: 44px; border-radius: 0; background: var(--grey-100); box-shadow: none; backdrop-filter: none; color: var(--color-text); line-height: 44px; text-shadow: none; }
   .hero-contact-ticker-track a { display: inline-flex; min-height: 44px; align-items: center; }
   .hero-contact-ticker a:hover { color: var(--color-primary-hover); }
   .hero-contact-ticker a:focus-visible { outline-color: var(--color-primary-hover); }
   .hero-trending { display: inline-flex; min-height: 44px; align-items: center; }
   .hero-welcome { bottom: 0; width: calc(100% - 40px); padding: 14px 18px; }
-  .hero-trending { top: 44%; right: 20px; }
+  .hero-trending { top: 16px; right: 16px; transform: none; }
   .experience-main { height: auto; }
   .experience-supporting { grid-auto-rows: clamp(160px, 24vw, 220px); }
   .experience-supporting .experience-visual, .experience-supporting picture, .experience-supporting img { min-height: 0; }
@@ -588,9 +588,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
   .about-leadership-grid img { height: clamp(260px, 78vw, 340px); }
   .about-story-image { height: clamp(220px, 64vw, 320px); }
   .hero .hero-welcome h1 { font-size: clamp(2rem, 8vw, 2.75rem); }
-  .hero-contact-ticker { left: 20px; width: calc(100% - 40px); }
   .hero-welcome { bottom: 0; }
-  .hero-trending { top: 34%; }
   .hero-video { transform: scale(2.1); }
   .identity { padding-block: 0; }
   .school-logo { width: 54px; height: 54px; }
