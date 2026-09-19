@@ -127,7 +127,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
 .foundation-statements article + article { padding-left: var(--space-lg); border-left: 1px solid var(--color-border); }
 .foundation-statements p:last-child { max-width: 46ch; margin: 0; }
 .foundation-statements .statement-reveal > p { opacity: 0; transform: translateY(32px); }
-.foundation-statements .statement-reveal.is-visible > p { opacity: 1; transform: translateY(0); transition: opacity 700ms ease-out, transform 700ms ease-out; }
+.foundation-statements .statement-reveal > .eyebrow { transform: translateX(-32px); }
+.foundation-statements .statement-reveal.is-visible > p { opacity: 1; transform: translate(0, 0); transition: opacity 1400ms ease-out, transform 1400ms ease-out; }
 .foundation-visual { width: min(100%, var(--container-max)); margin: 0 auto; }
 .foundation-visual a { display: block; }
 .foundation-visual img { display: block; width: 100%; height: auto; }
@@ -633,6 +634,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-primary);
 
 @media (prefers-reduced-motion: reduce) {
   .foundation-statements .statement-reveal > p,
+  .foundation-statements .statement-reveal > .eyebrow,
   .foundation-statements .statement-reveal.is-visible > p { opacity: 1; transform: none; transition: none; }
   .gallery-hero-panel { backdrop-filter: none; }
   .lightbox-image { animation: none; }
