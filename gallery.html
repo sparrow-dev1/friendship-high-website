@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Friendship High School, a government day high school in Hatcliffe, Harare.">
   <title>Gallery | Friendship High School</title>
+  <link rel="icon" href="static/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -12,12 +15,23 @@
   <script src="static/js/main.js" defer></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.08.36 2.24.54 3.42.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.52 21 3 13.48 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.18.18 2.34.54 3.42a1 1 0 0 1-.24 1Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3Zm1.8 1.8L12 12l7.2-5.2M4.8 17.2l5.1-4.1m9.3 4.1-5.1-4.1"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.45 19v-6h2.05l.31-2.34h-2.36v-1.5c0-.68.19-1.14 1.18-1.14h1.27V5.93a17.3 17.3 0 0 0-1.85-.1c-1.83 0-3.08 1.12-3.08 3.17v1.66H8.9V13h2.07v6h2.48Z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="6.25" y="6.25" width="11.5" height="11.5" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.75" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16.2" cy="7.8" r=".85" fill="#fff"/></symbol>
+  </svg>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-layout">
       <a class="school-mark" href="index.html" aria-label="Friendship High School home">
-        <img class="school-logo" src="static/images/friendship-high-logo.png" alt="">
+        <img class="school-logo" src="static/images/friendship-high-logo.png" width="336" height="327" alt="">
         <span>
           <strong>Friendship High School</strong>
           <small>Inspiring for Excellence</small>
@@ -35,106 +49,176 @@
         <a href="news.html" >News</a>
         <a href="gallery.html" aria-current="page">Gallery</a>
         <a href="contact.html" >Contact</a>
-        <a class="placement-link" href="admissions.html#application">Apply for Placement</a>
-        <div class="header-contact-ticker" aria-label="School contact details">
-          <div class="header-contact-ticker-track">
-            <a href="tel:+263242855158">+263 (242) 855158</a>
-            <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-          </div>
-        </div>
+        <a class="placement-link" href="admissions.html#apply" data-apply-trigger>Apply for Placement</a>
       </nav>
+      <div class="header-contact-actions" aria-label="School contact actions">
+        <a class="header-phone-action" href="tel:+263242855158" aria-label="Call Friendship High School"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <a class="header-email-action" href="mailto:friendshiphighs@gmail.com" aria-label="Email Friendship High School"><svg aria-hidden="true"><use href="#icon-email"></use></svg></a>
+        <span class="header-social-icon" role="img" aria-label="Friendship High School on Facebook"><svg class="brand-icon brand-icon-facebook" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+        <span class="header-social-icon header-social-instagram" role="img" aria-label="Friendship High School on Instagram"><svg class="brand-icon brand-icon-instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
 <section class="gallery-hero" aria-labelledby="gallery-title">
   <picture class="gallery-hero-picture">
-    <source type="image/webp" srcset="static/images/gallery/school-life-tile-3-640.webp 640w, static/images/gallery/school-life-tile-3-1200.webp 1200w, static/images/gallery/school-life-tile-3-2000.webp 2000w" sizes="100vw">
-    <img src="static/images/school-life-tile-3.jpg" width="4624" height="2604" alt="Friendship High School buildings and courtyard." fetchpriority="high">
+    <source type="image/webp" srcset="static/images/about-facilities-1-640.webp 640w, static/images/about-facilities-1-1200.webp 1200w, static/images/about-facilities-1-2000.webp 2000w" sizes="100vw">
+    <img src="static/images/about-facilities-1.jpg" width="4032" height="2268" alt="Connected Friendship High campus buildings and covered walkways." fetchpriority="high">
   </picture>
   <div class="container gallery-hero-content">
     <div class="gallery-hero-panel">
       <p class="eyebrow">Gallery</p>
       <h1 id="gallery-title">Friendship High in Pictures</h1>
-      <p>Explore our learning environment, facilities and everyday school life.</p>
     </div>
   </div>
 </section>
 
-<section class="section gallery-intro" aria-labelledby="gallery-intro-title">
-  <div class="container gallery-intro-inner">
-    <p class="eyebrow">Our school</p>
-    <h2 id="gallery-intro-title">Moments from Friendship High</h2>
-    <p>A visual look at the people and places that make up Friendship High School.</p>
-  </div>
-</section>
-
-<section class="section gallery-featured" aria-labelledby="featured-moments-title">
+<section class="section gallery-moments" aria-labelledby="gallery-moments-title">
   <div class="container">
-    <div class="section-heading"><p class="eyebrow">Featured moments</p><h2 id="featured-moments-title">Around Our School</h2></div>
-    <div class="featured-gallery-grid">
-      <figure class="gallery-figure gallery-figure-main">
-        <button class="gallery-open" type="button" data-gallery-index="0" aria-label="Open Friendship High campus photograph">
-          <picture><source type="image/webp" srcset="static/images/gallery/school-campus-640.webp 640w, static/images/gallery/school-campus-1080.webp 1080w" sizes="(max-width: 800px) 100vw, 66vw"><img src="static/images/school-campus.jpg" width="1080" height="583" alt="Friendship High campus buildings and courtyard."></picture>
-        </button>
-        <figcaption>Friendship High campus</figcaption>
-      </figure>
-      <figure class="gallery-figure">
-        <button class="gallery-open" type="button" data-gallery-index="1" aria-label="Open photograph of learners at Friendship High">
-          <picture><source type="image/webp" srcset="static/images/gallery/school-life-main-640.webp 640w, static/images/gallery/school-life-main-960.webp 960w" sizes="(max-width: 800px) 100vw, 34vw"><img src="static/images/school-life-main.jpg" width="960" height="1280" alt="Friendship High learners standing together outdoors." loading="lazy"></picture>
-        </button>
-        <figcaption>Learners at Friendship High</figcaption>
-      </figure>
-      <figure class="gallery-figure">
-        <button class="gallery-open" type="button" data-gallery-index="2" aria-label="Open second photograph of learners at Friendship High">
-          <picture><source type="image/webp" srcset="static/images/gallery/school-life-learners-640.webp 640w, static/images/gallery/school-life-learners-960.webp 960w" sizes="(max-width: 800px) 100vw, 34vw"><img src="static/images/school-life-learners.jpg" width="960" height="1280" alt="Friendship High learners standing outside the school buildings." loading="lazy"></picture>
-        </button>
-        <figcaption>Friendship High learners</figcaption>
-      </figure>
+    <div class="section-heading gallery-moments-heading">
+      <p class="eyebrow">Our School</p>
+      <h2 id="gallery-moments-title">Moments from Friendship High</h2>
+      <p>A visual look at the people and places that make up Friendship High School.</p>
+    </div>
+
+    <div class="gallery-mosaic">
+
+        <figure class="gallery-tile gallery-tile-lead gallery-mobile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="0" aria-label="Open learners together on a campus walkway photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-learners-walkway-640.webp 640w, static/images/authentic/gallery-learners-walkway-1200.webp 1200w, static/images/authentic/gallery-learners-walkway-4032.webp 4032w" sizes="(max-width: 520px) 100vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-learners-walkway.jpg" width="4032" height="2268" alt="Friendship High learners standing together on a campus walkway." loading="eager" decoding="sync" fetchpriority="high">
+            </picture>
+            <span class="gallery-tile-caption">Learners together on a campus walkway</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-tall">
+          <button class="gallery-open" type="button" data-gallery-index="1" aria-label="Open learners viewed from an upper-level walkway photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-overhead-group-640.webp 640w, static/images/authentic/gallery-overhead-group-1200.webp 1200w, static/images/authentic/gallery-overhead-group-2268.webp 2268w" sizes="(max-width: 520px) 50vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-overhead-group.jpg" width="2268" height="4032" alt="Friendship High learners viewed from an upper-level campus walkway." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Learners viewed from an upper-level walkway</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-wide gallery-mobile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="2" aria-label="Open learners seated together outside photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-seated-learners-640.webp 640w, static/images/authentic/gallery-seated-learners-1200.webp 1200w, static/images/authentic/gallery-seated-learners-4032.webp 4032w" sizes="(max-width: 520px) 100vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-seated-learners.jpg" width="4032" height="2268" alt="Six Friendship High learners seated together outside in school uniform." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Learners seated together outside</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="3" aria-label="Open friendship high buildings and covered walkways photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/about-facilities-1-640.webp 640w, static/images/about-facilities-1-1200.webp 1200w, static/images/about-facilities-1-2000.webp 2000w" sizes="(max-width: 520px) 50vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/about-facilities-1.jpg" width="4032" height="2268" alt="Connected Friendship High campus buildings and covered walkways." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Friendship High buildings and covered walkways</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-tall">
+          <button class="gallery-open" type="button" data-gallery-index="4" aria-label="Open learners beside a campus corridor photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-campus-candid-640.webp 640w, static/images/authentic/gallery-campus-candid-1200.webp 1200w, static/images/authentic/gallery-campus-candid-2268.webp 2268w" sizes="(max-width: 520px) 50vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-campus-candid.jpg" width="2268" height="4032" alt="Friendship High learners talking beside a campus corridor." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Learners beside a campus corridor</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-tall">
+          <button class="gallery-open" type="button" data-gallery-index="5" aria-label="Open a learner beside a school building plaque photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-learner-plaque-640.webp 640w, static/images/authentic/gallery-learner-plaque-1200.webp 1200w, static/images/authentic/gallery-learner-plaque-2268.webp 2268w" sizes="(max-width: 520px) 50vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-learner-plaque.jpg" width="2268" height="4032" alt="A Friendship High learner standing beside a school building plaque." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">A learner beside a school building plaque</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-wide gallery-mobile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="6" aria-label="Open learners seated together on the school grounds photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/gallery-seated-campus-640.webp 640w, static/images/authentic/gallery-seated-campus-1200.webp 1200w, static/images/authentic/gallery-seated-campus-4032.webp 4032w" sizes="(max-width: 520px) 100vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/authentic/gallery-seated-campus.jpg" width="4032" height="2268" alt="Friendship High learners seated in a row outside on the school grounds." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Learners seated together on the school grounds</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-wide gallery-mobile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="7" aria-label="Open friendship high learners seated together outside photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/homepage-experience-main-2026-09-640.webp 640w, static/images/homepage-experience-main-2026-09-1200.webp 1200w, static/images/homepage-experience-main-2026-09-2000.webp 2000w" sizes="(max-width: 520px) 100vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/homepage-experience-main-2026-09.jpg" width="4032" height="2268" alt="Friendship High learners seated together outside in school uniform." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Friendship High learners seated together outside</span>
+          </button>
+        </figure>
+
+        <figure class="gallery-tile gallery-tile-wide">
+          <button class="gallery-open" type="button" data-gallery-index="8" aria-label="Open friendship high entrance area photograph">
+            <picture>
+              <source type="image/webp" srcset="static/images/gallery/school-life-tile-4-640.webp 640w, static/images/gallery/school-life-tile-4-1200.webp 1200w, static/images/gallery/school-life-tile-4-2000.webp 2000w" sizes="(max-width: 520px) 50vw, (max-width: 800px) 34vw, 25vw">
+              <img class="gallery-focus-centre" src="static/images/school-life-tile-4.jpg" width="3264" height="1836" alt="Friendship High School administration building and paved entrance area." loading="lazy" decoding="async">
+            </picture>
+            <span class="gallery-tile-caption">Friendship High entrance area</span>
+          </button>
+        </figure>
+
     </div>
   </div>
 </section>
 
-<section class="section gallery-collection" aria-labelledby="photo-gallery-title">
-  <div class="container">
-    <div class="section-heading"><p class="eyebrow">Photo gallery</p><h2 id="photo-gallery-title">School Grounds</h2></div>
-    <div class="gallery-collection-grid">
-      <figure class="gallery-figure">
-        <button class="gallery-open" type="button" data-gallery-index="3" aria-label="Open photograph of Friendship High buildings">
-          <picture><source type="image/webp" srcset="static/images/gallery/school-life-tile-3-640.webp 640w, static/images/gallery/school-life-tile-3-1200.webp 1200w, static/images/gallery/school-life-tile-3-2000.webp 2000w" sizes="(max-width: 520px) 100vw, 50vw"><img src="static/images/school-life-tile-3.jpg" width="4624" height="2604" alt="Friendship High buildings across the courtyard." loading="lazy"></picture>
-        </button>
-        <figcaption>Friendship High buildings</figcaption>
-      </figure>
-      <figure class="gallery-figure">
-        <button class="gallery-open" type="button" data-gallery-index="4" aria-label="Open photograph of the Friendship High entrance area">
-          <picture><source type="image/webp" srcset="static/images/gallery/school-life-tile-4-640.webp 640w, static/images/gallery/school-life-tile-4-1200.webp 1200w, static/images/gallery/school-life-tile-4-2000.webp 2000w" sizes="(max-width: 520px) 100vw, 50vw"><img src="static/images/school-life-tile-4.jpg" width="3264" height="1836" alt="Friendship High building and paved entrance area." loading="lazy"></picture>
-        </button>
-        <figcaption>Friendship High entrance area</figcaption>
-      </figure>
-    </div>
+<section class="section gallery-admissions" aria-labelledby="gallery-admissions-title">
+  <div class="container gallery-admissions-inner">
+    <h2 id="gallery-admissions-title">Interested in joining Friendship High</h2>
+    <a class="about-link" href="admissions.html">Learn about Admissions <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
   </div>
-</section>
-
-<section class="section gallery-discover" aria-labelledby="gallery-discover-title">
-  <div class="container gallery-discover-inner"><p class="eyebrow">Discover more</p><h2 id="gallery-discover-title">See Life and Learning at Friendship High</h2><div class="planned-destinations"><span>School Life <small>Page planned</small></span><span>Academics <small>Page planned</small></span></div></div>
 </section>
 
 <dialog class="gallery-lightbox" aria-labelledby="lightbox-caption" aria-describedby="lightbox-position">
   <div class="lightbox-shell">
-    <button class="lightbox-close" type="button" aria-label="Close gallery">×</button>
-    <button class="lightbox-previous" type="button" aria-label="Previous photograph">←</button>
-    <figure><img class="lightbox-image" src="static/images/gallery/school-campus-1080.webp" alt="Friendship High campus buildings and courtyard."><figcaption id="lightbox-caption">Friendship High campus</figcaption><p id="lightbox-position" class="lightbox-position" aria-live="polite">1 of 5</p></figure>
-    <button class="lightbox-next" type="button" aria-label="Next photograph">→</button>
+    <button class="lightbox-close" type="button" aria-label="Close gallery"><svg aria-hidden="true"><use href="#icon-close"></use></svg></button>
+    <button class="lightbox-previous" type="button" aria-label="Previous photograph"><svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg></button>
+    <figure>
+      <img class="lightbox-image" src="static/images/authentic/gallery-learners-walkway-4032.webp" width="4032" height="2268" alt="Friendship High learners standing together on a campus walkway." decoding="async">
+      <figcaption id="lightbox-caption">Learners together on a campus walkway</figcaption>
+      <p id="lightbox-position" class="lightbox-position" aria-live="polite">1 of 9</p>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Next photograph"><svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></button>
   </div>
 </dialog>
 
 <script id="gallery-data" type="application/json">[
-  {"src":"static/images/gallery/school-campus-1080.webp","alt":"Friendship High campus buildings and courtyard.","caption":"Friendship High campus"},
-  {"src":"static/images/gallery/school-life-main-960.webp","alt":"Friendship High learners standing together outdoors.","caption":"Learners at Friendship High"},
-  {"src":"static/images/gallery/school-life-learners-960.webp","alt":"Friendship High learners standing outside the school buildings.","caption":"Friendship High learners"},
-  {"src":"static/images/gallery/school-life-tile-3-2000.webp","alt":"Friendship High buildings across the courtyard.","caption":"Friendship High buildings"},
-  {"src":"static/images/gallery/school-life-tile-4-2000.webp","alt":"Friendship High building and paved entrance area.","caption":"Friendship High entrance area"}
+
+  {"src":"static/images/authentic/gallery-learners-walkway-4032.webp","alt":"Friendship High learners standing together on a campus walkway.","caption":"Learners together on a campus walkway"},
+
+  {"src":"static/images/authentic/gallery-overhead-group-2268.webp","alt":"Friendship High learners viewed from an upper-level campus walkway.","caption":"Learners viewed from an upper-level walkway"},
+
+  {"src":"static/images/authentic/gallery-seated-learners-4032.webp","alt":"Six Friendship High learners seated together outside in school uniform.","caption":"Learners seated together outside"},
+
+  {"src":"static/images/about-facilities-1-2000.webp","alt":"Connected Friendship High campus buildings and covered walkways.","caption":"Friendship High buildings and covered walkways"},
+
+  {"src":"static/images/authentic/gallery-campus-candid-2268.webp","alt":"Friendship High learners talking beside a campus corridor.","caption":"Learners beside a campus corridor"},
+
+  {"src":"static/images/authentic/gallery-learner-plaque-2268.webp","alt":"A Friendship High learner standing beside a school building plaque.","caption":"A learner beside a school building plaque"},
+
+  {"src":"static/images/authentic/gallery-seated-campus-4032.webp","alt":"Friendship High learners seated in a row outside on the school grounds.","caption":"Learners seated together on the school grounds"},
+
+  {"src":"static/images/homepage-experience-main-2026-09-2000.webp","alt":"Friendship High learners seated together outside in school uniform.","caption":"Friendship High learners seated together outside"},
+
+  {"src":"static/images/gallery/school-life-tile-4-2000.webp","alt":"Friendship High School administration building and paved entrance area.","caption":"Friendship High entrance area"}
+
 ]</script>
 
   </main>

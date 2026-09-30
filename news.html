@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Friendship High School, a government day high school in Hatcliffe, Harare.">
-  <title>News & Events | Friendship High School</title>
+  <title>News &amp; Events | Friendship High School</title>
+  <link rel="icon" href="static/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -12,12 +15,23 @@
   <script src="static/js/main.js" defer></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.08.36 2.24.54 3.42.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.52 21 3 13.48 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.18.18 2.34.54 3.42a1 1 0 0 1-.24 1Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3Zm1.8 1.8L12 12l7.2-5.2M4.8 17.2l5.1-4.1m9.3 4.1-5.1-4.1"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.45 19v-6h2.05l.31-2.34h-2.36v-1.5c0-.68.19-1.14 1.18-1.14h1.27V5.93a17.3 17.3 0 0 0-1.85-.1c-1.83 0-3.08 1.12-3.08 3.17v1.66H8.9V13h2.07v6h2.48Z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="6.25" y="6.25" width="11.5" height="11.5" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.75" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16.2" cy="7.8" r=".85" fill="#fff"/></symbol>
+  </svg>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-layout">
       <a class="school-mark" href="index.html" aria-label="Friendship High School home">
-        <img class="school-logo" src="static/images/friendship-high-logo.png" alt="">
+        <img class="school-logo" src="static/images/friendship-high-logo.png" width="336" height="327" alt="">
         <span>
           <strong>Friendship High School</strong>
           <small>Inspiring for Excellence</small>
@@ -35,67 +49,69 @@
         <a href="news.html" aria-current="page">News</a>
         <a href="gallery.html" >Gallery</a>
         <a href="contact.html" >Contact</a>
-        <a class="placement-link" href="admissions.html#application">Apply for Placement</a>
-        <div class="header-contact-ticker" aria-label="School contact details">
-          <div class="header-contact-ticker-track">
-            <a href="tel:+263242855158">+263 (242) 855158</a>
-            <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-          </div>
-        </div>
+        <a class="placement-link" href="admissions.html#apply" data-apply-trigger>Apply for Placement</a>
       </nav>
+      <div class="header-contact-actions" aria-label="School contact actions">
+        <a class="header-phone-action" href="tel:+263242855158" aria-label="Call Friendship High School"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <a class="header-email-action" href="mailto:friendshiphighs@gmail.com" aria-label="Email Friendship High School"><svg aria-hidden="true"><use href="#icon-email"></use></svg></a>
+        <span class="header-social-icon" role="img" aria-label="Friendship High School on Facebook"><svg class="brand-icon brand-icon-facebook" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+        <span class="header-social-icon header-social-instagram" role="img" aria-label="Friendship High School on Instagram"><svg class="brand-icon brand-icon-instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
 <section class="news-page-hero" aria-labelledby="news-page-title">
-  <img src="static/images/school-life-learners.jpg" alt="Friendship High School learners together outside the school buildings.">
+  <picture>
+    <source type="image/webp" srcset="static/images/authentic/news-learners-640.webp 640w, static/images/authentic/news-learners-1200.webp 1200w, static/images/authentic/news-learners-4032.webp 4032w" sizes="100vw">
+    <img src="static/images/authentic/news-learners.jpg" width="4032" height="2268" alt="Friendship High learners standing together outside the school buildings." fetchpriority="high">
+  </picture>
   <div class="container news-page-hero-content">
     <div class="news-page-hero-panel">
-      <p class="eyebrow">News &amp; events</p>
+      <p class="eyebrow">News &amp; Events</p>
       <h1 id="news-page-title">Life at Friendship High</h1>
-      <p>Stay connected with school news, activities, achievements and events.</p>
     </div>
   </div>
 </section>
 
-<section class="section news-page-section" aria-labelledby="featured-title">
+<section class="section news-page-section news-trending" aria-labelledby="trending-title">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Latest from Friendship</p>
-      <h2 id="featured-title">A View of School Life</h2>
+      <h2 id="trending-title">Latest at Friendship High</h2>
     </div>
+
     <article class="featured-preview">
-      <img src="static/images/school-life-main.jpg" alt="Friendship High School learners together outdoors in school uniform.">
+      <picture>
+        <source type="image/webp" srcset="static/images/about-facilities-5-640.webp 640w, static/images/about-facilities-5-1200.webp 1200w, static/images/about-facilities-5-2000.webp 2000w" sizes="(max-width: 800px) 100vw, 65vw">
+        <img src="static/images/about-facilities-5.jpg" width="4032" height="2268" alt="Friendship High School courtyard with trees, paved walkways and classroom buildings." decoding="async">
+      </picture>
       <div class="featured-preview-copy">
-        <p class="preview-status">Preview content</p>
-        <p class="preview-category">School life</p>
-        <h3>Learning and Growing Together</h3>
-        <p>Friendship High is a government day high school serving learners across Forms 1–6 through Ordinary and Advanced Level education.</p>
+        <p class="preview-category">Learner achievement</p>
+        <h3>Friendship High Learners Reach National Level</h3>
+        <p class="story-summary">Friendship High learners are reaching national level in ICT, Mathematics and Fashion.</p>
       </div>
     </article>
+
+
   </div>
 </section>
 
-<section class="section news-page-section latest-news" aria-labelledby="latest-news-title">
-  <div class="container">
+<section class="section news-page-section older-news" aria-labelledby="older-news-title">
+  <div class="container events-layout">
     <div class="section-heading">
-      <p class="eyebrow">Latest news</p>
-      <h2 id="latest-news-title">What’s Happening at Friendship High</h2>
+      <p class="eyebrow">News archive</p>
+      <h2 id="older-news-title">Older News</h2>
     </div>
-    <div class="news-preview-grid">
-      <article class="news-preview-card">
-        <img src="static/images/school-campus.jpg" alt="Friendship High School campus buildings and courtyard.">
-        <div><p class="preview-status">Preview content</p><p class="preview-category">Learning</p><h3>Education Across Forms 1–6</h3><p>The school provides Ordinary and Advanced Level education for learners at different stages of high school.</p></div>
-      </article>
-      <article class="news-preview-card">
-        <img src="static/images/school-life-tile-3.jpg" alt="Friendship High School buildings viewed across the campus courtyard.">
-        <div><p class="preview-status">Preview content</p><p class="preview-category">Campus</p><h3>Spaces for Learning and Activity</h3><p>The school campus supports study, participation and the everyday routines of Friendship High learners.</p></div>
-      </article>
-      <article class="news-preview-card">
-        <img src="static/images/school-life-learners.jpg" alt="Friendship High School learners outdoors near the school buildings.">
-        <div><p class="preview-status">Preview content</p><p class="preview-category">School life</p><h3>Everyday Life at Friendship High</h3><p>Genuine school stories, activities and achievements will appear here once they are supplied and confirmed.</p></div>
-      </article>
+    <div class="older-news-list">
+
+        <article class="older-news-item">
+          <p class="preview-category">January 2024</p>
+          <h3>China–Zimbabwe Cultural Exchange at Friendship High</h3>
+          <p>Friendship High hosted a China–Zimbabwe cultural exchange programme featuring music, martial arts, magic and Zimbabwean cultural performances.</p>
+        </article>
+
     </div>
   </div>
 </section>
@@ -106,21 +122,26 @@
       <p class="eyebrow">Upcoming events</p>
       <h2 id="events-title">Important Dates at Friendship High</h2>
     </div>
-    <div class="events-empty" role="status">
-      <h3>Confirmed dates will appear here</h3>
-      <p>School events will be published once their dates and details have been confirmed.</p>
-    </div>
+
+      <div class="event-list">
+
+          <article class="event-notice">
+            <p class="preview-category">Upcoming</p>
+            <p class="event-date"><time datetime="2026-10-02">2 October 2026</time></p>
+            <h3>Annual Prize Giving Day</h3>
+
+          </article>
+
+      </div>
+
   </div>
 </section>
 
 <section class="section news-page-section news-explore" aria-labelledby="explore-title">
   <div class="container news-explore-inner">
     <p class="eyebrow">More from Friendship High</p>
-    <h2 id="explore-title">See More of Everyday Life at Our School</h2>
-    <div class="planned-destinations" aria-label="Planned website pages">
-      <a href="gallery.html">Explore Gallery <span aria-hidden="true">→</span></a>
-      <span>Discover School Life <small>Page planned</small></span>
-    </div>
+    <h2 id="explore-title">See More of Life at Our School</h2>
+    <a class="about-link news-gallery-link" href="gallery.html">Explore Gallery <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
   </div>
 </section>
 

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Friendship High School, a government day high school in Hatcliffe, Harare.">
   <title>Contact | Friendship High School</title>
+  <link rel="icon" href="static/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -12,12 +15,23 @@
   <script src="static/js/main.js" defer></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.08.36 2.24.54 3.42.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.52 21 3 13.48 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.18.18 2.34.54 3.42a1 1 0 0 1-.24 1Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3Zm1.8 1.8L12 12l7.2-5.2M4.8 17.2l5.1-4.1m9.3 4.1-5.1-4.1"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.45 19v-6h2.05l.31-2.34h-2.36v-1.5c0-.68.19-1.14 1.18-1.14h1.27V5.93a17.3 17.3 0 0 0-1.85-.1c-1.83 0-3.08 1.12-3.08 3.17v1.66H8.9V13h2.07v6h2.48Z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="6.25" y="6.25" width="11.5" height="11.5" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.75" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16.2" cy="7.8" r=".85" fill="#fff"/></symbol>
+  </svg>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-layout">
       <a class="school-mark" href="index.html" aria-label="Friendship High School home">
-        <img class="school-logo" src="static/images/friendship-high-logo.png" alt="">
+        <img class="school-logo" src="static/images/friendship-high-logo.png" width="336" height="327" alt="">
         <span>
           <strong>Friendship High School</strong>
           <small>Inspiring for Excellence</small>
@@ -35,19 +49,19 @@
         <a href="news.html" >News</a>
         <a href="gallery.html" >Gallery</a>
         <a href="contact.html" aria-current="page">Contact</a>
-        <a class="placement-link" href="admissions.html#application">Apply for Placement</a>
-        <div class="header-contact-ticker" aria-label="School contact details">
-          <div class="header-contact-ticker-track">
-            <a href="tel:+263242855158">+263 (242) 855158</a>
-            <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-          </div>
-        </div>
+        <a class="placement-link" href="admissions.html#apply" data-apply-trigger>Apply for Placement</a>
       </nav>
+      <div class="header-contact-actions" aria-label="School contact actions">
+        <a class="header-phone-action" href="tel:+263242855158" aria-label="Call Friendship High School"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <a class="header-email-action" href="mailto:friendshiphighs@gmail.com" aria-label="Email Friendship High School"><svg aria-hidden="true"><use href="#icon-email"></use></svg></a>
+        <span class="header-social-icon" role="img" aria-label="Friendship High School on Facebook"><svg class="brand-icon brand-icon-facebook" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+        <span class="header-social-icon header-social-instagram" role="img" aria-label="Friendship High School on Instagram"><svg class="brand-icon brand-icon-instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
 <section class="contact-hero" aria-labelledby="contact-title">
   <picture class="contact-hero-picture">
     <source type="image/webp" srcset="static/images/gallery/school-life-tile-4-640.webp 640w, static/images/gallery/school-life-tile-4-1200.webp 1200w, static/images/gallery/school-life-tile-4-2000.webp 2000w" sizes="100vw">
@@ -66,10 +80,10 @@
   <div class="container">
     <div class="section-heading"><p class="eyebrow">Get in touch</p><h2 id="get-in-touch-title">Contact Friendship High</h2></div>
     <div class="contact-information-grid">
-      <section aria-labelledby="contact-phone"><span class="contact-icon" aria-hidden="true">☎</span><div><h3 id="contact-phone">Phone</h3><p><a href="tel:+263242855158">+263 (242) 855158</a></p><a class="contact-action" href="tel:+263242855158">Call the school <span aria-hidden="true">→</span></a></div></section>
-      <section aria-labelledby="contact-email"><span class="contact-icon" aria-hidden="true">@</span><div><h3 id="contact-email">Email</h3><p><a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a></p><a class="contact-action" href="mailto:friendshiphighs@gmail.com">Send an email <span aria-hidden="true">→</span></a></div></section>
-      <section aria-labelledby="contact-address"><span class="contact-icon" aria-hidden="true">⌖</span><div><h3 id="contact-address">Address</h3><p>3331 Alpes Rd<br>Hatcliffe, Harare<br>Zimbabwe</p></div></section>
-      <section aria-labelledby="contact-hours"><span class="contact-icon" aria-hidden="true">◷</span><div><h3 id="contact-hours">School hours</h3><p>07:30–16:00</p></div></section>
+      <section aria-labelledby="contact-phone"><span class="contact-icon" aria-hidden="true"><svg><use href="#icon-phone"></use></svg></span><div><h3 id="contact-phone">Phone</h3><p><a href="tel:+263242855158">+263 (242) 855158</a></p><a class="contact-action" href="tel:+263242855158">Call the school <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a></div></section>
+      <section aria-labelledby="contact-email"><span class="contact-icon" aria-hidden="true"><svg><use href="#icon-email"></use></svg></span><div><h3 id="contact-email">Email</h3><p><a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a></p><a class="contact-action" href="mailto:friendshiphighs@gmail.com">Send an email <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a></div></section>
+      <section aria-labelledby="contact-address"><span class="contact-icon" aria-hidden="true"><svg><use href="#icon-location"></use></svg></span><div><h3 id="contact-address">Address</h3><p>3331 Alpes Rd<br>Hatcliffe, Harare<br>Zimbabwe</p></div></section>
+      <section aria-labelledby="contact-hours"><span class="contact-icon" aria-hidden="true"><svg><use href="#icon-clock"></use></svg></span><div><h3 id="contact-hours">School hours</h3><p>07:30–16:00</p></div></section>
     </div>
   </div>
 </section>
@@ -78,8 +92,8 @@
   <div class="container">
     <div class="section-heading"><p class="eyebrow">Find Friendship High</p><h2 id="contact-map-title">Visit Our Campus</h2></div>
     <div class="contact-map-layout">
-      <iframe title="Satellite map showing Friendship High School at 3331 Alpes Road, Hatcliffe, Harare" src="https://www.google.com/maps?q=Friendship%20High%20School%2C%203331%20Alpes%20Road%2C%20Hatcliffe%2C%20Harare%2C%20Zimbabwe&amp;output=embed&amp;t=k" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="visit-address"><p class="eyebrow">Visit us</p><address>3331 Alpes Rd<br>Hatcliffe, Harare<br>Zimbabwe</address><a class="primary-action contact-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Friendship%20High%20School%2C%203331%20Alpes%20Road%2C%20Hatcliffe%2C%20Harare%2C%20Zimbabwe" target="_blank" rel="noopener noreferrer">Get directions</a></div>
+      <iframe title="Map showing Friendship High School at 3331 Alpes Road, Hatcliffe, Harare" src="https://www.openstreetmap.org/export/embed.html?bbox=31.08761%2C-17.68824%2C31.09961%2C-17.67624&amp;layer=mapnik&amp;marker=-17.68224%2C31.09361" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="visit-address"><p class="eyebrow">Visit us</p><address>3331 Alpes Rd<br>Hatcliffe, Harare<br>Zimbabwe</address><a class="primary-action contact-directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=-17.68224%2C31.09361" target="_blank" rel="noopener noreferrer">Get directions</a></div>
     </div>
   </div>
 </section>
@@ -91,22 +105,6 @@
   </div>
 </section>
 
-<section class="section contact-section enquiry-section" aria-labelledby="enquiry-title">
-  <div class="container enquiry-layout">
-    <div class="section-heading"><p class="eyebrow">Send an enquiry</p><h2 id="enquiry-title">Have a Question?</h2><p>Online enquiries are not yet being submitted. Please phone or email the school using the details above.</p></div>
-    <form class="contact-enquiry-preview" aria-describedby="enquiry-status">
-      <div class="form-grid">
-        <label>Full name <span>(required)</span><input type="text" autocomplete="name" required></label>
-        <label>Email address <span>(required)</span><input type="email" autocomplete="email" required></label>
-        <label>Phone number<input type="tel" autocomplete="tel"></label>
-        <label>Enquiry type<select><option>General Enquiry</option><option>Admissions</option><option>Academics</option><option>School Life</option></select></label>
-        <label class="form-wide">Message <span>(required)</span><textarea required></textarea></label>
-      </div>
-      <p id="enquiry-status" class="application-status">This is a preview only. Information entered here is not sent or saved.</p>
-      <div class="application-actions"><button type="submit" disabled>Send Enquiry — Coming Soon</button><a href="tel:+263242855158">Call the school</a><a href="mailto:friendshiphighs@gmail.com">Send an email</a></div>
-    </form>
-  </div>
-</section>
 
   </main>
 

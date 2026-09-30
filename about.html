@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Friendship High School, a government day high school in Hatcliffe, Harare.">
   <title>About Friendship High School | Hatcliffe, Harare</title>
+  <link rel="icon" href="static/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -12,12 +15,23 @@
   <script src="static/js/main.js" defer></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.08.36 2.24.54 3.42.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.52 21 3 13.48 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.18.18 2.34.54 3.42a1 1 0 0 1-.24 1Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3Zm1.8 1.8L12 12l7.2-5.2M4.8 17.2l5.1-4.1m9.3 4.1-5.1-4.1"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.45 19v-6h2.05l.31-2.34h-2.36v-1.5c0-.68.19-1.14 1.18-1.14h1.27V5.93a17.3 17.3 0 0 0-1.85-.1c-1.83 0-3.08 1.12-3.08 3.17v1.66H8.9V13h2.07v6h2.48Z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="6.25" y="6.25" width="11.5" height="11.5" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.75" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16.2" cy="7.8" r=".85" fill="#fff"/></symbol>
+  </svg>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-layout">
       <a class="school-mark" href="index.html" aria-label="Friendship High School home">
-        <img class="school-logo" src="static/images/friendship-high-logo.png" alt="">
+        <img class="school-logo" src="static/images/friendship-high-logo.png" width="336" height="327" alt="">
         <span>
           <strong>Friendship High School</strong>
           <small>Inspiring for Excellence</small>
@@ -35,21 +49,24 @@
         <a href="news.html" >News</a>
         <a href="gallery.html" >Gallery</a>
         <a href="contact.html" >Contact</a>
-        <a class="placement-link" href="admissions.html#application">Apply for Placement</a>
-        <div class="header-contact-ticker" aria-label="School contact details">
-          <div class="header-contact-ticker-track">
-            <a href="tel:+263242855158">+263 (242) 855158</a>
-            <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-          </div>
-        </div>
+        <a class="placement-link" href="admissions.html#apply" data-apply-trigger>Apply for Placement</a>
       </nav>
+      <div class="header-contact-actions" aria-label="School contact actions">
+        <a class="header-phone-action" href="tel:+263242855158" aria-label="Call Friendship High School"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <a class="header-email-action" href="mailto:friendshiphighs@gmail.com" aria-label="Email Friendship High School"><svg aria-hidden="true"><use href="#icon-email"></use></svg></a>
+        <span class="header-social-icon" role="img" aria-label="Friendship High School on Facebook"><svg class="brand-icon brand-icon-facebook" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+        <span class="header-social-icon header-social-instagram" role="img" aria-label="Friendship High School on Instagram"><svg class="brand-icon brand-icon-instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
 <section class="about-hero" aria-labelledby="about-title">
-  <img src="static/images/school-campus.jpg" alt="Friendship High School campus buildings and courtyard.">
+  <picture>
+    <source type="image/webp" srcset="static/images/about-facilities-1-640.webp 640w, static/images/about-facilities-1-1200.webp 1200w, static/images/about-facilities-1-2000.webp 2000w" sizes="100vw">
+    <img src="static/images/about-facilities-1.jpg" width="4032" height="2268" alt="Connected Friendship High campus buildings and covered walkways." fetchpriority="high">
+  </picture>
   <div class="container about-hero-content">
     <div class="about-hero-panel">
       <h1 id="about-title">A School Built on Friendship.<br>Driven by Excellence.</h1>
@@ -66,7 +83,7 @@
         <p>Academic learning is supported by technology, sport, culture and opportunities for personal development within the wider school community.</p>
         <p class="about-facts">Government Day School <span aria-hidden="true">·</span> Forms 1–6 <span aria-hidden="true">·</span> O &amp; A Level <span aria-hidden="true">·</span> Hatcliffe, Harare</p>
       </div>
-      <img class="about-editorial-image" src="static/images/homepage-experience-main-administration-2026-09.png" alt="Friendship High School learners gathered outside the administration building.">
+      <img class="about-editorial-image" src="static/images/about-learn-grow-belong.jpg" srcset="static/images/about-learn-grow-belong-640.webp 640w, static/images/about-learn-grow-belong-1200.webp 1200w, static/images/about-learn-grow-belong-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 50vw" width="3024" height="4032" alt="Friendship High learners walking across a school sports court with the campus buildings behind them." loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -82,7 +99,21 @@
       <li><time datetime="2018">2018</time><strong>Learning began</strong><span>The new public high school became operational for the Hatcliffe community.</span></li>
       <li><time datetime="2024-01">January 2024</time><strong>Cultural exchange hosted</strong><span>Friendship High welcomed a China–Zimbabwe cultural exchange programme for learners.</span></li>
     </ol>
-    <img class="about-story-image" src="static/images/school-life-tile-4.jpg" alt="Friendship High School administration building and paved forecourt.">
+    <div class="about-story-carousel" data-about-carousel data-autoplay="3000" data-hold-pause tabindex="0" aria-label="Cultural exchange photographs. Press and hold to pause the slideshow.">
+      <div class="about-story-carousel-frame" aria-live="off">
+        <img class="about-carousel-slide is-active" data-carousel-slide src="static/images/about-cultural-exchange-1.png" srcset="static/images/about-cultural-exchange-1-640.webp 640w, static/images/about-cultural-exchange-1-1200.webp 1200w, static/images/about-cultural-exchange-1-1461.webp 1461w" sizes="(max-width: 1200px) 100vw, 1200px" width="1461" height="1076" alt="Friendship High learners and guests gathered in the school hall during a cultural exchange." aria-hidden="false" loading="lazy" decoding="async">
+        <img class="about-carousel-slide" data-carousel-slide src="static/images/about-cultural-exchange-2.png" srcset="static/images/about-cultural-exchange-2-640.webp 640w, static/images/about-cultural-exchange-2-1200.webp 1200w, static/images/about-cultural-exchange-2-1254.webp 1254w" sizes="(max-width: 1200px) 100vw, 1200px" width="1254" height="1254" alt="Learners sharing environmental displays with visitors outside the school hall." aria-hidden="true" loading="lazy" decoding="async">
+        <img class="about-carousel-slide" data-carousel-slide src="static/images/about-cultural-exchange-3.png" srcset="static/images/about-cultural-exchange-3-640.webp 640w, static/images/about-cultural-exchange-3-1200.webp 1200w, static/images/about-cultural-exchange-3-1609.webp 1609w" sizes="(max-width: 1200px) 100vw, 1200px" width="1609" height="977" alt="Zimbabwean students and guests at the 2024 China Government Scholarship awarding ceremony." aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+      <div class="about-story-carousel-controls">
+        <div class="about-carousel-dots" role="group" aria-label="Choose a cultural exchange photograph">
+          <button data-carousel-dot type="button" aria-label="Show photograph 1 of 3" aria-current="true"></button>
+          <button data-carousel-dot type="button" aria-label="Show photograph 2 of 3"></button>
+          <button data-carousel-dot type="button" aria-label="Show photograph 3 of 3"></button>
+        </div>
+        <span>Press and hold to pause</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -90,7 +121,27 @@
   <div class="container">
     <div class="section-heading"><p class="eyebrow">Built for learning</p><h2 id="facilities-title">Designed for Modern Learning</h2></div>
     <div class="about-facilities">
-      <img class="about-editorial-image" src="static/images/school-campus.jpg" alt="Friendship High School buildings and courtyard.">
+      <div class="about-facilities-gallery" data-about-carousel data-swipe tabindex="0" aria-label="Friendship High campus gallery">
+        <div class="about-facilities-gallery-frame" aria-live="off">
+          <img class="about-carousel-slide is-active" data-carousel-slide src="static/images/about-facilities-1.jpg" srcset="static/images/about-facilities-1-640.webp 640w, static/images/about-facilities-1-1200.webp 1200w, static/images/about-facilities-1-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 65vw" width="4032" height="2268" alt="Connected Friendship High campus buildings and covered walkways viewed from an upper level." aria-hidden="false" loading="lazy" decoding="async">
+          <img class="about-carousel-slide" data-carousel-slide src="static/images/about-facilities-2.jpg" srcset="static/images/about-facilities-2-640.webp 640w, static/images/about-facilities-2-1200.webp 1200w, static/images/about-facilities-2-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 65vw" width="4032" height="2268" alt="Long Friendship High classroom building with repeated windows and a tiled roof." aria-hidden="true" loading="lazy" decoding="async">
+          <img class="about-carousel-slide" data-carousel-slide src="static/images/about-facilities-3.jpg" srcset="static/images/about-facilities-3-640.webp 640w, static/images/about-facilities-3-1200.webp 1200w, static/images/about-facilities-3-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 65vw" width="2268" height="4032" alt="Upper-level Friendship High corridor with railings and a classroom building beyond." aria-hidden="true" loading="lazy" decoding="async">
+          <img class="about-carousel-slide" data-carousel-slide src="static/images/about-facilities-4.jpg" srcset="static/images/about-facilities-4-640.webp 640w, static/images/about-facilities-4-1200.webp 1200w, static/images/about-facilities-4-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 65vw" width="2268" height="4032" alt="View through a campus stairwell toward a hall, tiled roofs and the surrounding community." aria-hidden="true" loading="lazy" decoding="async">
+          <img class="about-carousel-slide" data-carousel-slide src="static/images/about-facilities-5.jpg" srcset="static/images/about-facilities-5-640.webp 640w, static/images/about-facilities-5-1200.webp 1200w, static/images/about-facilities-5-2000.webp 2000w" sizes="(max-width: 768px) 100vw, 65vw" width="4032" height="2268" alt="Friendship High courtyard with trees, paved walkways and classroom buildings." aria-hidden="true" loading="lazy" decoding="async">
+        </div>
+        <div class="about-facilities-gallery-controls">
+          <button data-carousel-previous type="button" aria-label="Show previous campus photograph"><svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg></button>
+          <div class="about-carousel-dots" role="group" aria-label="Choose a campus photograph">
+            <button data-carousel-dot type="button" aria-label="Show campus photograph 1 of 5" aria-current="true"></button>
+            <button data-carousel-dot type="button" aria-label="Show campus photograph 2 of 5"></button>
+            <button data-carousel-dot type="button" aria-label="Show campus photograph 3 of 5"></button>
+            <button data-carousel-dot type="button" aria-label="Show campus photograph 4 of 5"></button>
+            <button data-carousel-dot type="button" aria-label="Show campus photograph 5 of 5"></button>
+          </div>
+          <button data-carousel-next type="button" aria-label="Show next campus photograph"><svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></button>
+          <span class="visually-hidden" data-carousel-status aria-live="polite">Image 1 of 5</span>
+        </div>
+      </div>
       <div class="about-prose">
         <p>The original campus specification brought academic, specialist and sporting spaces together in one learning environment.</p>
         <ul class="about-facility-list"><li>Six science laboratories</li><li>Specialist learning spaces</li><li>Multifunction hall</li><li>400-metre athletics track</li><li>Football pitch</li><li>Multipurpose sports court</li></ul>
@@ -99,35 +150,14 @@
   </div>
 </section>
 
-<section class="section about-section about-partnership" aria-labelledby="partnership-title">
-  <div class="container">
-    <div class="section-heading"><p class="eyebrow">Friendship beyond borders</p><h2 id="partnership-title">A Friendship That Continues</h2></div>
-    <div class="about-split">
-      <img class="about-editorial-image" src="static/images/homepage-experience-learners-campus-2026-09.png" alt="Six Friendship High School learners standing together on the school grounds.">
-      <div class="about-prose"><p>In January 2024, Friendship High hosted a China–Zimbabwe cultural exchange programme that gave learners an opportunity to experience cultural traditions firsthand.</p><p>The programme included music, martial arts, magic and Zimbabwean cultural performances, continuing the people-to-people connection reflected in the school’s history.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section about-section" aria-labelledby="about-leadership-title">
-  <div class="container">
-    <div class="section-heading"><p class="eyebrow">School leadership</p><h2 id="about-leadership-title">Leading Friendship Forward</h2></div>
-    <div class="about-leadership-grid">
-      <figure><img class="about-editorial-image" src="static/images/head-portrait-temporary.png" alt="Temporary portrait image for the Head, Mrs Magwere."><figcaption><strong>Mrs Magwere</strong><span>Head</span></figcaption></figure>
-      <figure><img class="about-editorial-image" src="static/images/deputy-portrait-temporary.png" alt="Temporary portrait image for the Deputy Head, Mrs Charuma."><figcaption><strong>Mrs Charuma</strong><span>Deputy Head</span></figcaption></figure>
-    </div>
-    <a class="about-link about-leadership-link" href="index.html#leadership">Meet the leadership team <span aria-hidden="true">→</span></a>
-  </div>
-</section>
-
 <section class="about-closing" aria-labelledby="about-closing-title">
-  <img src="static/images/homepage-experience-main-2026-09.jpg" alt="Friendship High School learners seated together outside in school uniform.">
+  <img src="static/images/homepage-experience-main-2026-09.jpg" width="4032" height="2268" alt="Friendship High School learners seated together outside in school uniform." loading="lazy" decoding="async">
   <div class="container about-closing-content">
     <div class="about-hero-panel">
       <p class="eyebrow">Friendship High today</p>
       <h2 id="about-closing-title">Learning, belonging and preparing for what comes next.</h2>
       <p class="about-closing-copy">From its beginnings as a major education project to the school community it serves today, Friendship High continues to provide learners with space to develop their abilities and prepare for the future.</p>
-      <div class="about-closing-actions"><a class="about-link" href="admissions.html">Explore Admissions <span aria-hidden="true">→</span></a><a class="about-link" href="gallery.html">View School Gallery <span aria-hidden="true">→</span></a></div>
+      <div class="about-closing-actions"><a class="about-link" href="admissions.html">Explore Admissions <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a><a class="about-link" href="gallery.html">View School Gallery <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a></div>
     </div>
   </div>
 </section>

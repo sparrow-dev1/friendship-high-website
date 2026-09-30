@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Friendship High School, a government day high school in Hatcliffe, Harare.">
   <title>Friendship High School | Hatcliffe, Harare</title>
+  <link rel="icon" href="static/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
@@ -12,12 +15,23 @@
   <script src="static/js/main.js" defer></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.08.36 2.24.54 3.42.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.52 21 3 13.48 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.18.18 2.34.54 3.42a1 1 0 0 1-.24 1Z"/></symbol>
+    <symbol id="icon-email" viewBox="0 0 24 24"><path d="M3 5h18v14H3Zm1.8 1.8L12 12l7.2-5.2M4.8 17.2l5.1-4.1m9.3 4.1-5.1-4.1"/></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="#1877f2"/><path d="M13.45 19v-6h2.05l.31-2.34h-2.36v-1.5c0-.68.19-1.14 1.18-1.14h1.27V5.93a17.3 17.3 0 0 0-1.85-.1c-1.83 0-3.08 1.12-3.08 3.17v1.66H8.9V13h2.07v6h2.48Z" fill="#fff"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="6.25" y="6.25" width="11.5" height="11.5" rx="3.5" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="2.75" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16.2" cy="7.8" r=".85" fill="#fff"/></symbol>
+  </svg>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-layout">
       <a class="school-mark" href="index.html" aria-label="Friendship High School home">
-        <img class="school-logo" src="static/images/friendship-high-logo.png" alt="">
+        <img class="school-logo" src="static/images/friendship-high-logo.png" width="336" height="327" alt="">
         <span>
           <strong>Friendship High School</strong>
           <small>Inspiring for Excellence</small>
@@ -35,37 +49,46 @@
         <a href="news.html" >News</a>
         <a href="gallery.html" >Gallery</a>
         <a href="contact.html" >Contact</a>
-        <a class="placement-link" href="admissions.html#application">Apply for Placement</a>
-        <div class="header-contact-ticker" aria-label="School contact details">
-          <div class="header-contact-ticker-track">
-            <a href="tel:+263242855158">+263 (242) 855158</a>
-            <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-          </div>
-        </div>
+        <a class="placement-link" href="admissions.html#apply" data-apply-trigger>Apply for Placement</a>
       </nav>
+      <div class="header-contact-actions" aria-label="School contact actions">
+        <a class="header-phone-action" href="tel:+263242855158" aria-label="Call Friendship High School"><svg aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <a class="header-email-action" href="mailto:friendshiphighs@gmail.com" aria-label="Email Friendship High School"><svg aria-hidden="true"><use href="#icon-email"></use></svg></a>
+        <span class="header-social-icon" role="img" aria-label="Friendship High School on Facebook"><svg class="brand-icon brand-icon-facebook" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+        <span class="header-social-icon header-social-instagram" role="img" aria-label="Friendship High School on Instagram"><svg class="brand-icon brand-icon-instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    
+
   <section id="welcome" class="section hero" aria-labelledby="hero-title">
-    <div class="hero-contact-ticker" aria-label="School contact details">
-      <div class="hero-contact-ticker-track">
-        <a href="tel:+263242855158">+263 (242) 855158</a>
-        <a href="mailto:friendshiphighs@gmail.com">friendshiphighs@gmail.com</a>
-      </div>
-    </div>
     <div class="container hero-layout">
       <div class="hero-copy">
         <div class="hero-welcome">
           <p class="eyebrow">Welcome to</p>
           <h1 id="hero-title"><span>Friendship High</span><span>School</span></h1>
         </div>
-        <a class="hero-trending" href="news.html">Trending at FHS</a>
       </div>
-      <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="Aerial view of Friendship High School">
-        <source src="static/videos/fhs-aerial.mp4" type="video/mp4">
-      </video>
+      <div class="hero-slideshow" data-hero-slideshow aria-label="Friendship High School learners and campus">
+        <picture class="hero-slide is-active" data-hero-slide aria-hidden="false">
+          <source type="image/webp" srcset="static/images/authentic/hero-learners-campus-640.webp 640w, static/images/authentic/hero-learners-campus-1200.webp 1200w, static/images/authentic/hero-learners-campus-4032.webp 4032w" sizes="100vw">
+          <img class="hero-slide-campus" src="static/images/authentic/hero-learners-campus.jpg" width="4032" height="2268" alt="Friendship High learners standing together outside the school buildings." fetchpriority="high" decoding="async">
+        </picture>
+        <picture class="hero-slide" data-hero-slide aria-hidden="true">
+          <source type="image/webp" srcset="static/images/authentic/hero-learners-portrait-640.webp 640w, static/images/authentic/hero-learners-portrait-1200.webp 1200w, static/images/authentic/hero-learners-portrait-4032.webp 4032w" sizes="100vw">
+          <img class="hero-slide-portrait" src="static/images/authentic/hero-learners-portrait.jpg" width="4032" height="2268" alt="Friendship High learners gathered on the school grounds." loading="lazy" decoding="async">
+        </picture>
+        <picture class="hero-slide" data-hero-slide aria-hidden="true">
+          <source type="image/webp" srcset="static/images/authentic/hero-administration-640.webp 640w, static/images/authentic/hero-administration-1200.webp 1200w, static/images/authentic/hero-administration-4032.webp 4032w" sizes="100vw">
+          <img class="hero-slide-administration" src="static/images/authentic/hero-administration.jpg" width="4032" height="3024" alt="Friendship High learners standing outside the administration block." loading="lazy" decoding="async">
+        </picture>
+        <div class="hero-slideshow-controls">
+          <button class="hero-slide-toggle" type="button" data-hero-toggle aria-label="Pause homepage photographs" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path data-hero-pause d="M8 6v12M16 6v12"></path><path data-hero-play d="M9 6l9 6-9 6z" hidden></path></svg>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -78,34 +101,38 @@
       <div class="experience-grid">
         <div class="experience-visual experience-main-picture">
           <picture>
-            <source type="image/webp" srcset="static/images/homepage-experience-main-administration-2026-09-640.webp 640w, static/images/homepage-experience-main-administration-2026-09-1200.webp 1200w, static/images/homepage-experience-main-administration-2026-09-1692.webp 1692w" sizes="(max-width: 800px) 100vw, 67vw">
-            <img class="experience-main" src="static/images/homepage-experience-main-administration-2026-09.png" width="1692" height="930" alt="Friendship High School learners gathered outside the administration building." loading="lazy">
+            <source type="image/webp" srcset="static/images/authentic/experience-learners-640.webp 640w, static/images/authentic/experience-learners-1200.webp 1200w, static/images/authentic/experience-learners-4032.webp 4032w" sizes="(max-width: 800px) 100vw, 67vw">
+            <img class="experience-main" src="static/images/authentic/experience-learners.jpg" width="4032" height="2268" alt="Friendship High learners standing together outside in school uniform." loading="lazy" decoding="async">
           </picture>
           <a class="experience-image-link" href="about.html">Explore FHS</a>
         </div>
         <div class="experience-supporting">
           <div class="experience-visual">
             <picture>
-              <img src="static/images/school-campus.jpg" width="1080" height="607" alt="Friendship High School campus buildings and courtyard." loading="lazy">
+              <source type="image/webp" srcset="static/images/about-facilities-5-640.webp 640w, static/images/about-facilities-5-1200.webp 1200w, static/images/about-facilities-5-2000.webp 2000w" sizes="(max-width: 520px) 50vw, 17vw">
+              <img src="static/images/about-facilities-5.jpg" width="4032" height="2268" alt="Friendship High courtyard with trees, paved walkways and classroom buildings." loading="lazy" decoding="async">
             </picture>
             <a class="experience-image-link" href="gallery.html">Campus</a>
           </div>
           <div class="experience-visual">
             <picture>
-              <source type="image/webp" srcset="static/images/homepage-experience-science-2026-09-640.webp 640w, static/images/homepage-experience-science-2026-09-1200.webp 1200w, static/images/homepage-experience-science-2026-09-1671.webp 1671w" sizes="(max-width: 520px) 50vw, 17vw">
-              <img src="static/images/homepage-experience-science-2026-09.png" width="1671" height="941" alt="Friendship High School learners conducting a science experiment in a laboratory." loading="lazy">
+              <source type="image/webp" srcset="static/images/authentic/experience-science-640.webp 640w, static/images/authentic/experience-science-1200.webp 1200w, static/images/authentic/experience-science-2268.webp 2268w" sizes="(max-width: 520px) 50vw, 17vw">
+              <img src="static/images/authentic/experience-science.jpg" width="2268" height="4032" alt="A Friendship High learner standing at the entrance to the junior biology laboratory." loading="lazy" decoding="async">
             </picture>
             <a class="experience-image-link" href="gallery.html">Laboratories</a>
           </div>
           <div class="experience-visual">
             <picture>
-              <source type="image/webp" srcset="static/images/homepage-experience-learners-campus-2026-09-640.webp 640w, static/images/homepage-experience-learners-campus-2026-09-1200.webp 1200w, static/images/homepage-experience-learners-campus-2026-09-1672.webp 1672w" sizes="(max-width: 520px) 50vw, 17vw">
-              <img src="static/images/homepage-experience-learners-campus-2026-09.png" width="1672" height="941" alt="Six Friendship High School learners standing together on the school grounds." loading="lazy">
+              <source type="image/webp" srcset="static/images/authentic/experience-uniforms-640.webp 640w, static/images/authentic/experience-uniforms-1200.webp 1200w, static/images/authentic/experience-uniforms-2268.webp 2268w" sizes="(max-width: 520px) 50vw, 17vw">
+              <img src="static/images/authentic/experience-uniforms.jpg" width="2268" height="4032" alt="Friendship High learners standing on campus in school uniform." loading="lazy" decoding="async">
             </picture>
             <a class="experience-image-link" href="about.html">Uniforms</a>
           </div>
           <div class="experience-visual">
-            <img src="static/images/school-life-tile-4.jpg" alt="Friendship High School administration block and paved entrance area." loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="static/images/authentic/experience-campus-640.webp 640w, static/images/authentic/experience-campus-1200.webp 1200w, static/images/authentic/experience-campus-3024.webp 3024w" sizes="(max-width: 520px) 50vw, 17vw">
+              <img src="static/images/authentic/experience-campus.jpg" width="3024" height="4032" alt="A Friendship High learner opening the school hall door." loading="lazy" decoding="async">
+            </picture>
             <a class="experience-image-link" href="admissions.html">Join Us</a>
           </div>
         </div>
@@ -127,7 +154,7 @@
       </div>
       <figure class="foundation-visual">
         <a href="static/images/our-foundation-v2.png" target="_blank" rel="noopener" aria-label="Open the What Guides Us graphic at full size">
-          <img src="static/images/our-foundation-v2.png" alt="Our Foundation: Friendship High School values of Respect, Diversity, Teamwork, Integrity, Creativity and Responsibility, centred around Unhu Ubuntu.">
+          <img src="static/images/our-foundation-v2.png" width="1254" height="1254" alt="Our Foundation: Friendship High School values of Respect, Diversity, Teamwork, Integrity, Creativity and Responsibility, centred around Unhu Ubuntu." loading="lazy" decoding="async">
         </a>
         <figcaption id="identity-title" class="visually-hidden">What Guides Us</figcaption>
       </figure>
@@ -143,17 +170,25 @@
 
       <div class="leadership-profiles">
         <article class="leader-profile">
-          <img class="leader-photo" src="static/images/head-portrait-temporary.png" alt="Temporary portrait image for the Head, Mrs Magwere.">
-          <p class="leader-role">Head</p>
-          <h3>Mrs Magwere</h3>
-          <p>Profile information will be added when verified.</p>
+          <div class="leader-portrait-slot" role="img" aria-label="Portrait space reserved for Mrs Magwere">
+            <img src="static/images/friendship-high-logo.png" width="336" height="327" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="leader-copy">
+            <p class="leader-role">Head</p>
+            <h3>Mrs Magwere</h3>
+            <p class="leader-message">We are committed to a safe, caring and disciplined environment where every learner can grow, discover their potential and prepare for the future.</p>
+          </div>
         </article>
 
         <article class="leader-profile">
-          <img class="leader-photo" src="static/images/deputy-portrait-temporary.png" alt="Temporary portrait image for the Deputy Head, Mrs Charuma.">
-          <p class="leader-role">Deputy Head</p>
-          <h3>Mrs Charuma</h3>
-          <p>Profile information will be added when verified.</p>
+          <div class="leader-portrait-slot" role="img" aria-label="Portrait space reserved for Mrs Charuma">
+            <img src="static/images/friendship-high-logo.png" width="336" height="327" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="leader-copy">
+            <p class="leader-role">Deputy Head</p>
+            <h3>Mrs Charuma</h3>
+            <p class="leader-message">We support learners in their daily learning, nurture their talents and help them develop discipline, confidence and respect for others.</p>
+          </div>
         </article>
       </div>
 
@@ -176,19 +211,22 @@
       </div>
       <div class="news-list">
         <article class="news-item">
-          <img class="news-image" src="static/images/school-campus.jpg" alt="Friendship High School campus buildings and courtyard.">
+          <picture>
+            <source type="image/webp" srcset="static/images/about-facilities-5-640.webp 640w, static/images/about-facilities-5-1200.webp 1200w, static/images/about-facilities-5-2000.webp 2000w" sizes="(max-width: 800px) 100vw, 50vw">
+            <img class="news-image" src="static/images/about-facilities-5.jpg" width="4032" height="2268" alt="Friendship High School courtyard with trees, paved walkways and classroom buildings." loading="lazy" decoding="async">
+          </picture>
           <div class="news-item-copy">
-            <p class="placeholder-label">Academics</p>
-            <h3>Learning from Form 1 to Form 6</h3>
-            <p>Friendship High provides Ordinary and Advanced Level learning, with pathways including Arts, Commercials, Sciences and Computer Science.</p>
+            <p class="placeholder-label">Learner achievement</p>
+            <h3>Friendship High Learners Reach National Level</h3>
+            <p>Friendship High learners are reaching national level in ICT, Mathematics and Fashion.</p>
           </div>
         </article>
         <article class="news-item">
-          <img class="news-image" src="static/images/school-life-learners.jpg" alt="Friendship High School learners standing together outdoors.">
+          <img class="news-image" src="static/images/about-facilities-5.jpg" width="4032" height="2268" alt="Friendship High courtyard with trees, walkways and classroom buildings." loading="lazy" decoding="async">
           <div class="news-item-copy">
-            <p class="placeholder-label">Campus life</p>
-            <h3>Spaces that support school life</h3>
-            <p>The campus includes science and computer laboratories, sports courts and grounds supporting learning and school life.</p>
+            <p class="placeholder-label">Upcoming</p>
+            <h3>Annual Prize Giving Day</h3>
+            <p><time datetime="2026-10-02">2 October 2026</time></p>
           </div>
         </article>
       </div>
@@ -209,8 +247,9 @@
         </address>
       </div>
       <div class="location-map">
-        <iframe title="Satellite map showing Friendship High School in Hatcliffe, Harare" src="https://www.google.com/maps?q=Friendship%20High%20School%2C%203331%20Alpes%20Road%2C%20Hatcliffe%2C%20Harare%2C%20Zimbabwe&amp;output=embed&amp;t=k" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Friendship%20High%20School%2C%203331%20Alpes%20Road%2C%20Hatcliffe%2C%20Harare%2C%20Zimbabwe" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+        <a class="location-map-image" href="https://www.google.com/maps/dir/?api=1&amp;destination=-17.68224%2C31.09361" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Friendship High School in Google Maps"><img src="static/images/friendship-high-map-clean.png" width="1200" height="610" alt="Map showing Friendship High School on Alpes Road in Hatcliffe, Harare."></a>
+        <p class="location-map-attribution">Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></p>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-17.68224%2C31.09361" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
       </div>
     </div>
   </section>
